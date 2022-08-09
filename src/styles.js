@@ -7,29 +7,27 @@ export const Container = styled.div`
 
 export const Flex = styled.div`
     display:flex;
+    display:flex;    
+    align-items:center;
+    height:100vh;
 `
 
 export const Box = styled.div``
 
 export const Section = styled.section`
-    display:flex;    
-    align-items:center;
-    height:100vh;
     width:100%;
+    opacity:0;
+    transform: translateX(-60px);
+    background-color:${props => props.bgPrimary ? '#111' : '#fff'};
+    color:${props => props.bgPrimary ? '#fff' : '#111'};
 
     p{
         margin: 15px 0 10px;
-    }        
+    }
+
+    animation:slide .3s forwards ease;    
 `
 
-export const Button = styled.button`
-    padding:10px 20px;
-    border-radius:3px;
-    background: transparent;
-    border: 1px solid var(--bg-primary);
-    cursor:pointer;
-    &:hover{
-        background:#111;
-        color:white;
-    }
+export const Svg = styled.div`
+    margin:-4px 0;
 `

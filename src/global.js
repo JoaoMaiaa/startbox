@@ -4,6 +4,8 @@ const Global = createGlobalStyle`
     :root{
         --bg-primary:#111;
         --font-primary:#111;
+        --font-secondary:#fff;
+        --bg-secondary:#fff;
     }
 
     *{
@@ -16,14 +18,23 @@ const Global = createGlobalStyle`
 
     p{
         font-size:1.5rem;
-        font-weight:400;
-        color:var(--font-primary);
+        font-weight:400;       
+        padding:1rem 0 1rem;
     }
 
-    h1, h2, h3, h4, h5, h6{
-        color:var(--font-primary);
+    h1, h2, h3, h4, h5, h6{        
         font-size:3rem;
         font-weight:700;
+    }
+
+    @keyframes slide {
+        from{
+            opacity:0;
+        }
+        to{
+            transform: translateX(0); // transform é anterior ao opacity
+            opacity:1
+        }
     }
 `
 
