@@ -11,6 +11,7 @@ const Global = createGlobalStyle`
         --small-spacing:1.5rem;
         --medium-spacing:3rem;
         --large-spacing:5rem;
+        --container:80rem;
     }
 
     *{
@@ -19,6 +20,10 @@ const Global = createGlobalStyle`
         box-sizing:border-box;
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         font-family: 'Poppins', sans-serif;
+    }
+
+    a, ul, li {
+        text-decoration:none;
     }
 
 
