@@ -2,10 +2,15 @@ import { createGlobalStyle } from 'styled-components'
 
 const Global = createGlobalStyle`
     :root{
-        --bg-primary:#111;
+        --bg-dark:#111;
         --font-primary:#111;
         --font-secondary:#fff;
-        --bg-secondary:#fff;
+        --bg-white:#fff;
+        --bg-third:#ffcc11;
+        --font-third:#ffcc11;
+        --small-spacing:1.5rem;
+        --medium-spacing:3rem;
+        --large-spacing:5rem;
     }
 
     *{
@@ -16,16 +21,6 @@ const Global = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
     }
 
-    p{
-        font-size:1.5rem;
-        font-weight:400;       
-        padding:1rem 0 1rem;
-    }
-
-    h1, h2, h3, h4, h5, h6{        
-        font-size:3rem;
-        font-weight:700;
-    }
 
     @keyframes slide {
         from{
