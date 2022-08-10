@@ -4,14 +4,14 @@ const Global = createGlobalStyle`
     :root{
         --bg-dark:#111;
         --font-primary:#111;
-        --font-secondary:#fff;
+        --font-secondary:#3B696B;
         --bg-white:#fff;
         --bg-third:#ffcc11;
         --font-third:#ffcc11;
         --small-spacing:1.5rem;
         --medium-spacing:3rem;
         --large-spacing:5rem;
-        --container:80rem;
+        --container:75rem;
     }
 
     *{
@@ -22,10 +22,18 @@ const Global = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
     }
 
-    a, ul, li {
+    a {
         text-decoration:none;
+        color:var(--font-secondary);
     }
 
+    li {
+        list-style:none;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        color:var(--font-primary);
+    }
 
     @keyframes slide {
         from{
