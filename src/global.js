@@ -20,6 +20,7 @@ const Global = createGlobalStyle`
         box-sizing:border-box;
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         font-family: 'Poppins', sans-serif;
+        // overflow-y:hidden;
     }
 
     a {
@@ -29,10 +30,21 @@ const Global = createGlobalStyle`
 
     li {
         list-style:none;
+        margin: 0 var(--small-spacing);
     }
 
     h1,h2,h3,h4,h5,h6{
         color:var(--font-primary);
+    }
+
+    p{
+        line-height:1.5rem;
+    }
+
+    img{
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
     }
 
     @keyframes slide {
