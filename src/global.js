@@ -2,16 +2,19 @@ import { createGlobalStyle } from 'styled-components'
 
 const Global = createGlobalStyle`
     :root{
-        --bg-dark:#111;
         --font-primary:#111;
         --font-secondary:#3B696B;
-        --bg-white:#fff;
-        --bg-third:#ffcc11;
-        --font-third:#ffcc11;
+        --bg-white:#fff;        
+        --bg-dark:#111;
         --small-spacing:1.5rem;
         --medium-spacing:3rem;
         --large-spacing:5rem;
         --container:75rem;
+    }
+
+    body{
+        background-color: #F6F0DB;
+
     }
 
     *{
@@ -19,13 +22,12 @@ const Global = createGlobalStyle`
         padding:0;
         box-sizing:border-box;
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        font-family: 'Poppins', sans-serif;
-        // overflow-y:hidden;
+        font-family: 'Poppins', sans-serif;        
+        color: #414A44;
     }
 
     a {
         text-decoration:none;
-        color:var(--font-secondary);
     }
 
     li {
@@ -34,7 +36,7 @@ const Global = createGlobalStyle`
     }
 
     h1,h2,h3,h4,h5,h6{
-        color:var(--font-primary);
+        color:#383221;
     }
 
     p{

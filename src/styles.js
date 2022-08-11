@@ -4,16 +4,17 @@ export const Container = styled.section`
     max-width: var(--container);
     padding:0 var(--small-spacing);
     margin: auto;
+    background-color:${({bg}) => bg} ;
 `
 export const Box = styled.div`
-    padding:var(${props=> props.padding ? props.padding : ''});
+    padding:${props=> props.padding ? props.padding : ''};
     margin:${props=> props.margin ? props.margin : ''};       
     color:${props=> props.color ? props.color : ''};
     display:${props=> props.display ? props.display : ''};
     justify-content:${props=> props.justifyContent ? props.justifyContent : ''};
     align-items:${props=> props.alignItems ? props.alignItems : ''};
     flex-wrap: ${props=> props.wrap ? props.wrap : ''};
-    background-color:var(${({bg})=>bg}); // destructure
+    background-color:${({bg})=>bg}; // destructure
     width:${props=> props.width ? props.width : ''};
     height:${props=> props.height ? props.height : ''};
     border:${props=> props.border ? props.border : ''};
@@ -51,6 +52,7 @@ export const Img = styled.img`
     background-position:center;
     width:${props => props.width ? props.width : ''};
     min-height:${props => props.height ? props.height : ''};
+    margin:-4px 0;
 `
 
 export const Button = styled.a`
@@ -61,10 +63,12 @@ export const Button = styled.a`
     border:${props=> props.border ? props.border : ''};
     border-radius:${props=> props.borderRadius ? props.borderRadius : ''};
     background-color:var(${({bg})=>bg}); // destructure
+    cursor: pointer;
+    display:inline-flex;
 
     &:hover{
-        background-color:#3B696B;
-        color:#fff;
+        background-color:${({bgHover})=>bgHover}; // destructure
+        color:${({fontHover})=>fontHover};
     }
 `
 
