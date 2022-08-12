@@ -27,8 +27,11 @@ export const Box = styled.div`
     flex:${props => props.flex ? props.flex : ''};
     overflow: ${({overflow}) => overflow};
     overflow-x: ${({overflowX}) => overflowX};
-    white-space: ${({nowrap}) => nowrap};
-    @media screen and (max-width: 600px){
+    white-space: ${({nowrap}) => nowrap};   
+    opacity:${({opacity}) =>opacity};
+    transform: translateX(${({translateX}) => translateX});
+    animation:${({animation}) =>animation} .3s ease forwards;
+    @media screen and (max-width: 750px){
         min-width:${props=> props.mWidth ? props.mWidth : ''};
     }
 `
@@ -90,7 +93,7 @@ export const A = styled.a`
     margin:${({margin}) => margin};
     &:hover{
         text-decoration: ${({decorationHover}) => decorationHover};
-    }
+    }    
 `
 
 

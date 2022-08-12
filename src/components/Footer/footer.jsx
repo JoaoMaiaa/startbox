@@ -5,7 +5,7 @@ const Footer = () => {
     <>
       <footer>
         <S.Box padding="2rem 0" decoration="underline" display="flex" justifyContent="center">
-          <S.Text >Feito por <S.A target="_blank" href="https://joaomaia.vercel.app"> João Maia</S.A></S.Text>
+          <S.Text>Made by <S.A target="_blank" href="https://joaomaia.vercel.app"> João Maia</S.A></S.Text>
         </S.Box>
       </footer>
     </>
