@@ -14,7 +14,7 @@ const Global = createGlobalStyle`
 
     body{
         background-color: #F6F0DB;
-
+        overflow-x:hidden;
     }
 
     *{
@@ -27,8 +27,7 @@ const Global = createGlobalStyle`
     }    
 
     li {
-        list-style:none;
-        margin: 0 var(--small-spacing);
+        list-style:none;        
     }
 
     h1,h2,h3,h4,h5,h6{

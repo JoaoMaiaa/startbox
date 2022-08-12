@@ -17,12 +17,20 @@ export const Box = styled.div`
     background-color:${({bg})=>bg}; // destructure
     width:${props=> props.width ? props.width : ''};
     height:${props=> props.height ? props.height : ''};
+    min-height:${props=> props.mHeight ? props.mHeight : ''};
+    max-height:100%;
     border:${props=> props.border ? props.border : ''};
     border-radius:${props=> props.borderRadius ? props.borderRadius : ''};
     position:${props=> props.position ? props.position : ''};
     top:${props=> props.top ? props.top : ''} ;   
     gap: ${props => props.gap ? props.gap : ''};
-    flex-fill:${props => props.flex ? props.flex : ''};
+    flex:${props => props.flex ? props.flex : ''};
+    overflow: ${({overflow}) => overflow};
+    overflow-x: ${({overflowX}) => overflowX};
+    white-space: ${({nowrap}) => nowrap};
+    @media screen and (max-width: 600px){
+        min-width:${props=> props.mWidth ? props.mWidth : ''};
+    }
 `
 export const Text = styled.p`
     font-size:${props=> props.fontSize ? props.fontSize : ''};
@@ -39,6 +47,8 @@ export const Heading1 = styled.h1`
     color:${props=> props.color ? props.color : ''};
     font-weight:${props=> props.weight ? props.weight : ''};
     text-align:${props=> props.align ? props.align : ''} ;
+    padding:${({padding}) => padding};
+    width:${({width}) => width};
 `
 export const Heading2 = styled.h2`
     font-size:${props=> props.fontSize ? props.fontSize : ''};
@@ -52,7 +62,7 @@ export const Img = styled.img`
     background-position:center;
     width:${props => props.width ? props.width : ''};
     min-height:${props => props.height ? props.height : ''};
-    margin:${props => props.margin ? props.margin : ''} 0;
+    margin:${props => props.margin ? props.margin : ''};
     border-radius:${props=> props.borderRadius ? props.borderRadius : ''};
     transform:rotate(${props=> props.rotate ? props.rotate : ''});
 `
@@ -75,7 +85,12 @@ export const Button = styled.a`
 `
 
 export const A = styled.a`
-    text-decoration: underline;
+    text-decoration: ${({decoration}) => decoration};
+    font-size:${({size}) => size};   
+    margin:${({margin}) => margin};
+    &:hover{
+        text-decoration: ${({decorationHover}) => decorationHover};
+    }
 `
 
 
