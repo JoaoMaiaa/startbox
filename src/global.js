@@ -15,6 +15,8 @@ const Global = createGlobalStyle`
     body{
         background-color: #F6F0DB;
         overflow-x:hidden;
+        margin:0;
+        padding:0;
     }
 
     *{
@@ -24,7 +26,12 @@ const Global = createGlobalStyle`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         font-family: 'Poppins', sans-serif;        
         color: #414A44;
-    }    
+    } 
+    
+    ul{
+        padding:0;
+        margin:0;
+    }
 
     li {
         list-style:none;        

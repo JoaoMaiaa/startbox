@@ -16,6 +16,7 @@ export const Box = styled.div`
     flex-wrap: ${props=> props.wrap ? props.wrap : ''};
     background-color:${({bg})=>bg}; // destructure
     width:${props=> props.width ? props.width : ''};
+    min-width:${props=> props.minWidth ? props.minWidth : ''};
     height:${props=> props.height ? props.height : ''};
     min-height:${props=> props.mHeight ? props.mHeight : ''};
     max-height:100%;
@@ -33,6 +34,8 @@ export const Box = styled.div`
     animation:${({animation}) =>animation} .3s ease forwards;
     @media screen and (max-width: 750px){
         min-width:${props=> props.mWidth ? props.mWidth : ''};
+        flex-wrap:${props=> props.mWrap ? props.mWrap : ''};
+        max-width:${props=> props.MaxWidth ? props.MaxWidth : ''};
     }
 `
 export const Text = styled.p`
@@ -93,7 +96,8 @@ export const A = styled.a`
     margin:${({margin}) => margin};
     &:hover{
         text-decoration: ${({decorationHover}) => decorationHover};
-    }    
+    } 
+    color:${({color})=>color}  ; 
 `
 
 
