@@ -23,7 +23,7 @@ function App() {
                 <S.Heading1 fontSize="2.5rem">
                   Hey! Welcome
                 </S.Heading1>
-                <S.Text color="#414A44" padding="0 4rem 0 0" margin="10px 0 8px">
+                <S.Text color="#414A44" padding="0 2rem 0 0" margin="10px 0 8px">
                   We are a web development startup we are ready to serve you
                 </S.Text>
                 <S.Button color="#414A44" bgHover="#414A44" fontHover="#F6F0DB" border="2px solid #414A44" padding="0.8rem 1rem">See more</S.Button>
@@ -39,10 +39,10 @@ function App() {
         <S.Container >
           <S.Box display="flex" height="100vh" alignItems="center">
             <S.Box data-aos="fade-right">
-              <S.Heading1 fontSize="2.5rem" width="100vw" >
+              <S.Heading1 fontSize="2.5rem" >
                 Product development
               </S.Heading1>
-              <S.Text color="#414A44" padding="0 4rem 0 0" margin="10px 0 8px">
+              <S.Text color="#414A44" padding="0 2rem 0 0" margin="10px 0 8px">
                 We also develop products designed for your needs
               </S.Text>
               <S.Button color="#414A44" bgHover="#414A44" fontHover="#F6F0DB" border="2px solid #414A44" padding="0.8rem 1rem">See more</S.Button>
@@ -81,7 +81,7 @@ function App() {
       </S.Box>
       <S.Box bg="#111">
         <S.Container>
-          <S.Box display="flex" data-aos="fade-down" width="100%" height="100%" mHeight="100vh" alignItems="center" >
+          <S.Box padding="0 0 2rem 0" display="flex" data-aos="fade-down" width="100%" height="100%" mHeight="100vh" alignItems="center" >
             <S.Box margin="0" bg="#F6F0DB" borderRadius="4px" display="flex" mWrap="wrap" justifyContent="space-between">
               <S.Box padding="1.5rem" flex="1" MaxWidth="100%">
                 <S.Heading1 fontSize="2rem">
@@ -113,7 +113,7 @@ function App() {
         </S.Container>
       </S.Box>
       <S.Box>
-        <S.Img rotate="180deg" src="/wave.svg" />
+        <S.Img margin="-4px" rotate="180deg" src="/wave.svg" />
       </S.Box>
       <S.Box>
         <S.Container>
