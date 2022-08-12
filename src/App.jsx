@@ -1,25 +1,17 @@
-import { useEffect, useState, componentDidMount } from 'react'
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import * as S from './styles'
 import Footer from './components/Footer/footer'
 
-function App() {
-  const [ name, setName ] = useState('')
+function App() {  
 
   useEffect(()=>{
-    // console.log(document.documentElement.scrollTop)
-    handleScroll()
-  },[name])
+    AOS.init()
+    
+  },[])
 
- 
-
-  function handleScroll(){
-    if(document.documentElement.scrollTop > 430){
-      setName('slide')
-      console.log('ok')
-    }
-    return
-  }
   return (
     <>
       <S.Box position="relative">
@@ -27,7 +19,7 @@ function App() {
         <S.Container>
           <S.Box position="absolute" top="0" >
             <S.Box display="flex" height="100vh" alignItems="center">
-              <S.Box animation={name} >
+              <S.Box data-aos="fade-right">
                 <S.Heading1 fontSize="2.5rem">
                   Hey! Welcome
                 </S.Heading1>
@@ -46,7 +38,7 @@ function App() {
       <S.Box bg="#111">
         <S.Container >
           <S.Box display="flex" height="100vh" alignItems="center">
-            <S.Box animation={name}>
+            <S.Box data-aos="fade-right">
               <S.Heading1 fontSize="2.5rem" width="100vw" >
                 Product development
               </S.Heading1>
@@ -60,7 +52,7 @@ function App() {
       </S.Box>
       <S.Box bg="#111">
         <S.Container>
-          <S.Box display="flex" height="100vh" alignItems="center">
+          <S.Box display="flex" data-aos="fade-up" height="100vh" alignItems="center">
             <S.Box overflowX="auto" display="flex" gap="1rem" margin="auto" >
               <S.Box display="inline-block" mWidth="80%" flex="1" padding="2rem" bg="#383221" borderRadius="4px">
                 <S.Heading2 color="#F6F0DB">Web</S.Heading2>
@@ -89,7 +81,7 @@ function App() {
       </S.Box>
       <S.Box bg="#111">
         <S.Container>
-          <S.Box display="flex" height="100%" mHeight="100vh" alignItems="center" >
+          <S.Box display="flex" data-aos="fade-down"  height="100%" mHeight="100vh" alignItems="center" >
             <S.Box margin="0" bg="#F6F0DB" borderRadius="4px" display="flex" wrap="wrap" justifyContent="space-between">
               <S.Box padding="2rem" mWidth="100%" width="50%">
                 <S.Heading1 fontSize="2rem">
